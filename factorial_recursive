@@ -1,0 +1,10 @@
+def fac_rec(i):
+  #a=0
+  if i==1 or i==0:
+    return 1
+  else:
+    return(fac_rec(i-1)*i)
+      
+
+i= int(input('enter'))
+print(fac_rec(i))
