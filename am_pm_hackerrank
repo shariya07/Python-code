@@ -1,0 +1,22 @@
+s= input()
+a=s[-2:]
+b= s[:-2].split(':')
+if a == 'PM':
+  c=b[0]
+  if c!='12' :
+      hr=int(c)+12
+      b[0]=str(hr)
+      print(':'.join(b))
+  else:
+      print(':'.join(b))
+elif a == 'AM':
+  print(a)
+  c=b[0]
+  print(c)
+  if c=='12' :
+    b[0]='00'
+    print(':'.join(b))
+  else:
+    print(':'.join(b))
+        
+    
