@@ -1,0 +1,13 @@
+a= input('enter - ')
+n= len(a)
+b= int(a)
+s = 0
+for i in a:
+ # print(i)
+  count = pow(int(i),n)
+  s=count+s
+  
+if s ==int(a) :
+  print('armstrong number')
+else:
+  print('not armstrong number')
