@@ -1,0 +1,21 @@
+a= int(input())
+b=int(input())
+z=0
+i=1
+if a<b:
+  while z==0 :
+    c=b*i
+    i=i+1
+    if c%a==0:
+      print(c)
+      z=1
+else:
+  while z==0:
+    c=a*i
+    i=i+1
+
+    if c%b==0:
+      print(c)
+      z=1
+      
+y=0
