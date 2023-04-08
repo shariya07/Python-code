@@ -1,0 +1,17 @@
+n=int(input('enteer'))
+ln=[2]
+for i in range(2,n):
+  
+  x=3
+  for  j in range(2,i):
+
+    if i%j==0:
+      x=1
+      break
+    else:
+      x=0
+
+  if x==0:
+    ln.append(i)
+
+print(ln)
