@@ -1,0 +1,20 @@
+class circle:
+  def __init__(self,radius):
+    self.radius = radius
+
+  def getarea(self):
+    self.area = 3.14*self.radius*self.radius
+    print('Area -',self.area)
+
+  def getcircumference(self):
+    self.circumference = round(2*3.14*self.radius,2)
+    print('Circumference-',self.circumference)
+
+l=[]
+n= int(input())
+for i in range(n):
+  ele=int(input())
+  l.append(circle(ele))
+for j in l:
+  j.getarea()
+  j.getcircumference()
