@@ -1,0 +1,18 @@
+stack =[]
+
+def appends(a):
+  stack.append(a)
+
+def pops():
+  stack.pop()
+
+vcount=(int(input()))
+
+if vcount ==1:
+  a=input()
+  appends(a)
+
+elif vcount!=1:
+  pops()
+
+print(stack)
