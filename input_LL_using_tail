@@ -1,0 +1,32 @@
+class node :
+  def __init__(self,value):
+    self.value = value
+    self.next = None
+
+def inputlist():
+  inputlist=[int(ele)for ele in input().split()]
+  head = None
+  tail = None
+  for i in inputlist:
+    newnode=node(i)
+
+    if head is None:
+      head= newnode
+      tail=newnode
+
+    else:
+      tail.next=newnode
+      tail=newnode
+
+  return head
+
+head = inputlist()
+
+def printlist(head):
+  tail = head
+  while tail is not None:
+    
+    print(tail.value)
+    tail=tail.next
+
+printlist(head)
