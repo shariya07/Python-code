@@ -1,0 +1,75 @@
+class node :
+  def __init__(self,value):
+    self.value = value
+    self.next = None
+
+def inputlist():
+  inputlist=[int(ele)for ele in input().split()]
+  head = None
+  tail = None
+  for i in inputlist:
+    newnode=node(i)
+
+    if head is None:
+      head= newnode
+      tail=newnode
+
+    else:
+      tail.next=newnode
+      tail=newnode
+
+  return head
+
+head = inputlist()
+
+def printlist(head):
+  tail = head
+  while tail is not None:
+    
+    print(tail.value)
+    tail=tail.next
+
+def insertel(head,i):
+  count=0
+  tail = head
+  while tail is not None:
+    count =count+1
+    if i==1:
+      temp=head
+      head=node(7)
+      head.next=temp
+      break
+
+    elif count ==(i-1):
+      prev=tail
+      curr=tail.next
+      a=node(6)
+      prev.next=a
+      a.next=curr
+      break
+    else:
+      tail=tail.next
+  return head
+      
+def deleteel(head,i):
+  count=0
+  tail = head
+  while tail is not None:
+    count =count+1
+    if i==1:
+      head=head.next
+      
+      break
+
+    elif count ==(i-1):
+      prev=tail
+      prev.next=tail.next.next
+      
+      break
+    else:
+      tail=tail.next
+  return head
+
+i=int(input('Enter -'))
+head = deleteel(head,i) 
+printlist(head)
